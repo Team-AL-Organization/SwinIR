@@ -108,7 +108,7 @@ def main():
             print('Testing {:d} {:20s}'.format(idx, imgname))
 
     # summarize psnr/ssim
-    if img_gt is not None:
+    if args.folder_gt is not None:
         ave_psnr = sum(test_results['psnr']) / len(test_results['psnr'])
         ave_ssim = sum(test_results['ssim']) / len(test_results['ssim'])
         print('\n{} \n-- Average PSNR/SSIM(RGB): {:.2f} dB; {:.4f}'.format(save_dir, ave_psnr, ave_ssim))
@@ -220,7 +220,7 @@ def get_image_pair(args, path):
     # 001 classical image sr/ 002 lightweight image sr (load lq-gt image pairs)
     if args.task in ['classical_sr', 'lightweight_sr']:
         img_gt = cv2.imread(path, cv2.IMREAD_COLOR).astype(np.float32) / 255.
-        img_lq = cv2.imread(f'{args.folder_lq}/{imgname}x{args.scale}{imgext}', cv2.IMREAD_COLOR).astype(
+        img_lq = cv2.imread(f'{args.folder_lq}/{imgname}{imgext}', cv2.IMREAD_COLOR).astype(
             np.float32) / 255.
 
     # 003 real-world image sr (load lq image only)

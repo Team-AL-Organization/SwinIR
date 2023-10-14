@@ -126,7 +126,7 @@ def worker(path, opt):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Image cropping tool")
-    parser.add_argument("--n_threads", type=int, default=20, help="Thread number")
+    parser.add_argument("--n_threads", type=int, default=1, help="Thread number")
     parser.add_argument("--compression_level", type=int, default=3,
                         help="CV_IMWRITE_PNG_COMPRESSION from 0 to 9")
     parser.add_argument("--input_folder", type=str, required=True, help="Path to the input folder")

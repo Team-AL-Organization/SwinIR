@@ -81,18 +81,18 @@ in terminal:
 pytho3 generate_mod_LR_bic.py \
   --sourcedir /path/to/input_folder \
   --savedir /path/to/save_folder \
-  --mod_scale 128 \
-  --up_scale 64
+  --mod_scale 2 \
+  --up_scale 2
 in cmd:
 python generate_mod_LR_bic.py ^
 --sourcedir /path/to/input_folder ^
 --savedir /path/to/save_folder ^
---mod_scale 128 ^
---up_scale 64 
+--mod_scale 2 ^
+--up_scale 2 
 in powershell:
 python generate_mod_LR_bic.py `
 --sourcedir /path/to/input_folder `
 --savedir /path/to/save_folder `
---mod_scale 128 `
---up_scale 64 
+--mod_scale 2 `
+--up_scale 2 
 """

@@ -11,6 +11,7 @@
     "root": "superresolution"            // "denoising" | "superresolution" | "dejpeg"
     , "pretrained_netG": null      // path of pretrained model. We fine-tune X3/X4 models from X2 model, so that `G_optimizer_lr` and `G_scheduler_milestones` can be halved to save time.
     , "pretrained_netE": null      // path of pretrained model
+    , "pretrained_optimizerG": null      // path to optimizer
   }
 
   , "datasets": {
@@ -18,7 +19,7 @@
       "name": "train_dataset"           // just name
       , "dataset_type": "sr"         // "dncnn" | "dnpatch" | "fdncnn" | "ffdnet" | "sr" | "srmd" | "dpsr" | "plain" | "plainpatch" | "jpeg"
       , "dataroot_H": "trainsets/trainH" // path of H training dataset. DIV2K (800 training images)
-      // , "dataroot_L": "trainsets/trainL" s// path of L training dataset
+      , "dataroot_L": "trainsets/trainL" // path of L training dataset
 
       , "H_size": 256                   // 128/192/256/512.
 
